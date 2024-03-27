@@ -13,10 +13,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Rotas
 const rotaUsuario = require("./routes/rotasUsuario");
 const rotaProduto = require("./routes/rotasProduto");
-const rotaEntrada= require("./routes/rotasEntrada"); 
-const rotaSaida= require("./routes/rotasSaida"); 
-const rotaEstoque = require("./routes/rotasEstoque"); 
-
 
 // Configuração de headers para CORS
 app.use((req, res, next) => {
@@ -35,10 +31,6 @@ app.use((req, res, next) => {
 // Rotas de Usuário, Produto e Entrada de Produto
 app.use("/usuario", rotaUsuario);
 app.use("/produto", rotaProduto);
-app.use("/entrada", rotaEntrada); 
-app.use("/saida", rotaSaida); 
-app.use("/estoque", rotaEstoque); 
-
 
 // Tratamento de erros para rotas não encontradas
 app.use((req, res, next) => {
